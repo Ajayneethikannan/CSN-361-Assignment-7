@@ -1,0 +1,70 @@
+\hypertarget{client_8cpp}{}\section{q2/client.cpp File Reference}
+\label{client_8cpp}\index{q2/client.\+cpp@{q2/client.\+cpp}}
+
+
+This file contains the code for creating a client which communicates to the client at port 8000, and sends the encoded word.  
+
+
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for client.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{client_8cpp_a614217d263be1fb1a5f76e2ff7be19a2}\label{client_8cpp_a614217d263be1fb1a5f76e2ff7be19a2}} 
+\#define {\bfseries P\+O\+RT}~8000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{client_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the code for creating a client which communicates to the client at port 8000, and sends the encoded word. 
+
+\begin{DoxyAuthor}{Author}
+Ajay Neethi Kannan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2/10/19 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{client_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}\label{client_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}} 
+\index{client.\+cpp@{client.\+cpp}!main@{main}}
+\index{main@{main}!client.\+cpp@{client.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+sock \+: to store the socket descriptor
+
+valread \+: to check the status of reading a message from the buffer
+
+serv\+\_\+addr \+: to store the address of the server
+
+buffer \+: to read and write messages
+
+1.\+create a socket of A\+F\+\_\+\+I\+N\+ET address family
+
+2.\+Change the representation of the port number
+
+3.\+Convert I\+Pv4 addresses from text to binary form
+
+4.\+Connect to the server using the connect function
+
+
+\begin{DoxyEnumerate}
+\item Send a message to the server
+\end{DoxyEnumerate}
+
+6.\+Wait till the server sends a message back. 7.\+Store the message in the buffer.
+
+8.\+Print the buffer value. 
